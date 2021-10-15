@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#002F56">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="700dp"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/app_icon" />
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/indicator_dots"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/muli_bold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Inserte PIN para salir"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <com.andrognito.pinlockview.IndicatorDots
+        android:id="@+id/indicator_dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pin_lock_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp" />
+
+    <com.andrognito.pinlockview.PinLockView
+        android:id="@+id/pin_lock_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="200dp"
+        app:keypadButtonSize="100dp"
+        app:keypadShowDeleteButton="true"
+        app:keypadTextColor="#FFFFFF"
+        app:keypadTextSize="14dp" />
+
+    <Button
+        android:id="@+id/btnVolver"
+        style="@style/ButtonCommon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="50dp"
+        android:text="Volver" />
+
+</RelativeLayout>
